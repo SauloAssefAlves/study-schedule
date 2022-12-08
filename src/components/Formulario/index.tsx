@@ -1,10 +1,10 @@
 import Button from "../Button";
-import "./style.scss";
+import style from "./formulario.module.scss";
 
 export default function Formulario() {
   return (
-    <form className="novaTarefa">
-      <div className="inputContainer">
+    <form className={style.novaTarefa}>
+      <div className={style.inputContainer}>
         <label htmlFor="tarefa">Adicione um novo estudo</label>
         <input
           type="text"
@@ -13,7 +13,7 @@ export default function Formulario() {
           placeholder="O que você quer estudar"
         />
       </div>
-      <div className="inputContainer">
+      <div className={style.inputContainer}>
         <label htmlFor="tempo">Tempo</label>
         <input
           type="time"
@@ -25,7 +25,7 @@ export default function Formulario() {
           required
         />
       </div>
-      <Button />
+      <Button>Adicionar</Button>
     </form>
   );
 }
